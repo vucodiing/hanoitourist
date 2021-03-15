@@ -1,4 +1,14 @@
-@media (max-width: 1200px) {}
+@media (max-width: 1023px) {
+    .combo__item {
+        max-width: none;
+    }
+    .list-tour__item {
+        max-width: none;
+    }
+    .widget-contact__item+.widget-contact__item {
+        margin-top: 5px;
+    }
+}
 
 @media (max-width: 991px) {
     .header {
@@ -140,6 +150,22 @@
         align-items: flex-end;
         justify-content: center;
     }
+    .combo__right .btn--placeholder {
+        padding: 8px 28px;
+    }
+}
+
+@media (max-width: 991px) {
+    .image-box__item {
+        margin-top: 0;
+    }
+    .image-box__img {
+        height: 120px;
+    }
+    .box-custom {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
 }
 
 @media (max-width: 767px) {
@@ -191,6 +217,65 @@
             text-align: center;
         }
     }
+    .widget-contact__item img {
+        width: 40px;
+        height: 40px;
+    }
+    .my-service__head {
+        margin-bottom: 30px;
+    }
+    .box-custom {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+    .gallery-box {
+        margin-top: 10px;
+    }
+    .image-box {
+        margin-top: 40px;
+    }
+    .sub-title h4 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-footer img {
+        margin: 0 auto;
+    }
+    .company-name {
+        text-align: center;
+    }
+    .list-info-footer {
+        padding-right: 0;
+    }
+    .list-info-footer li {
+        margin-bottom: 15px;
+    }
+    .list-info-footer span,
+    .list-info-footer a {
+        font-size: 1.5rem;
+    }
+    .receive-info {
+        margin-top: 10px;
+    }
+    .signup-bct {
+        margin-bottom: 20px;
+    }
+    ul.list-social a {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 56.25%;
+    }
+    .nav-link {
+        padding: 6px 3px;
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 424px) {
@@ -200,5 +285,8 @@
     .nav-pills .nav-link {
         font-size: 1.4rem;
         padding: 4px 12px;
+    }
+    .combo__right .btn--placeholder {
+        padding: 6px 22px;
     }
 }
