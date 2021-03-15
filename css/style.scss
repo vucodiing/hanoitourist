@@ -333,6 +333,14 @@ label {
     }
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
 .header {
     &__mid {
         position: absolute;
@@ -381,6 +389,31 @@ label {
     }
 }
 
+.overlay-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: calc(100% - 320px);
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.header__bottom.active {
+    transform: translateX(0);
+    transition: all 0.3s ease;
+}
+
+.active {
+    transform: translateX(0);
+    transition: all 0.3s ease;
+}
+
+.btn-collapse {
+    display: none;
+}
+
 .logo img {
     width: 11rem;
     height: auto;
@@ -404,6 +437,19 @@ a.btn--cart {
     i {
         color: $bgbar;
         padding-right: 10px;
+    }
+}
+
+.toogle-menu {
+    padding: 4px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: .4rem;
+    &:hover {
+        border-color: $coral-hover;
+    }
+    img {
+        width: 40px;
+        height: 30px;
     }
 }
 
@@ -458,6 +504,21 @@ a.btn--cart {
     }
 }
 
+.btn-collapse {
+    background: transparent;
+    position: absolute;
+    right: 6px;
+    top: -2px;
+    width: 30px;
+    height: 33px;
+    &:hover,
+    &:focus {
+        border: 0;
+        outline: 0;
+        color: #fff;
+    }
+}
+
 .pos-static {
     position: static;
 }
@@ -468,6 +529,7 @@ a.btn--cart {
     position: absolute;
     left: 0;
     top: 100%;
+    z-index: 100;
     padding: 15px;
     min-width: 200px;
     border-bottom-left-radius: 4px;
@@ -515,16 +577,64 @@ a.btn--cart {
     @include font(1.5rem, 500);
 }
 
+.menu-mobile {
+    padding: 1rem 1.5rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.menu-mobile__item {
+    padding: 5px 0px;
+}
+
+.menu-mobile__head {
+    margin-bottom: 10px;
+}
+
+.menu-mobile__head a {
+    display: block;
+    color: #333;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding: 5px 10px;
+}
+
+.tel-number,
+.email {
+    padding: 2px 12px;
+    color: #FFA300;
+}
+
+.tel-number a,
+.email a {
+    padding: 5px 0;
+}
+
+.tel-number i,
+.email i {
+    padding-right: 2px;
+}
+
+.tel-number a {
+    color: #007bff;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
 
 /* main */
 
 .banner {
     position: relative;
+    background-color: $bggray;
     &__slide {
-        height: 100vh;
+        // height: 100vh;
     }
     &__item img {
         height: 100vh;
+        object-fit: cover;
     }
 }
 
@@ -603,6 +713,10 @@ a.btn--cart {
 
 .form-group label {
     font-size: 1.5rem;
+    color: #015196;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
 }
 
 #inland,
@@ -804,6 +918,7 @@ h3.no-border {
         height: 120px;
         img {
             height: 100%;
+            width: 100%;
             object-fit: cover;
             transition: all 0.3s ease;
         }
@@ -1026,6 +1141,10 @@ h3.no-border {
         width: 100%;
         object-fit: cover;
     }
+}
+
+.slick-slider img {
+    width: 100%;
 }
 
 .post-item {
@@ -1261,8 +1380,7 @@ h3.no-border {
 /* footer */
 
 .footer {
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 45px;
     background-color: #3B5BA6;
     color: #fff;
 }
@@ -1280,6 +1398,7 @@ h3.no-border {
 }
 
 .list-info-footer {
+    padding-right: 20px;
     span,
     a {
         color: #fff;
@@ -1292,4 +1411,161 @@ h3.no-border {
         min-width: 20px;
         color: #ffa300;
     }
+}
+
+.list-left {
+    padding-right: 20px;
+}
+
+.receive-info {
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 16px;
+        img {
+            display: inline-block;
+            padding-right: 10px;
+        }
+        span {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0f62ac;
+        }
+    }
+    .form-group {
+        padding-bottom: 10px;
+    }
+    .form-control {
+        height: 35px;
+        padding: 10px;
+        font-size: 1.4rem;
+    }
+    label {
+        span {
+            color: $textred;
+        }
+    }
+}
+
+.btn-signup {
+    margin-top: 10px;
+    background-color: $bgbar;
+    color: #fff;
+    text-transform: uppercase;
+    &:hover {
+        background-color: $bgbtn-tag;
+    }
+}
+
+.signup-bct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+        flex: 32%;
+        text-align: center;
+    }
+    img {
+        display: inline-block;
+    }
+}
+
+.footer-top {
+    margin-bottom: 30px;
+    .container {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #fff;
+    }
+}
+
+.footer-bottom {
+    padding-bottom: 10px;
+}
+
+.social-wp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.list-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+        margin: 0 10px;
+    }
+    a {
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        width: 32px;
+        height: 32px;
+        color: #fff;
+        background-color: #0288ff;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: $coral-hover;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+.copy-right {
+    background-color: #127bd8;
+    padding: 6px 0;
+    p {
+        margin-bottom: 0;
+    }
+    a {
+        color: #fff;
+        font-weight: 700;
+        &:hover {
+            color: $coral;
+        }
+    }
+}
+
+.widget-contact {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+}
+
+.widget-contact__item+.widget-contact__item {
+    margin-top: 15px;
+}
+
+.widget-contact__item {
+    a {
+        display: inline-block;
+    }
+    img {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+.tooltip {
+    font-size: 1.4rem;
+}
+
+.tooltip-inner {
+    max-width: 500px;
+    padding: 5px 6px;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    opacity: 0.8;
+    border-radius: 0.5rem;
 }
