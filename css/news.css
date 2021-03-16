@@ -101,7 +101,7 @@
     transition: 0.3s; }
     .exp-travel .exp-text button:hover {
       background-color: #0f62ac;
-      color: red; }
+      color: #fff; }
 
 .travel-item {
   border: 1px solid rgba(0, 0, 0, 0.12);
