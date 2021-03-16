@@ -100,6 +100,9 @@ $(document).ready(function() {
 
     /* handbook slide */
     $('.handbook__top').slick({
+        autoplay: true,
+        fade: true,
+        autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
@@ -107,6 +110,8 @@ $(document).ready(function() {
         asNavFor: '.handbook__bottom'
     });
     $('.handbook__bottom').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
         slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.handbook__top',
@@ -190,7 +195,7 @@ $(document).ready(function() {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1
 
                 }
@@ -271,7 +276,7 @@ $(document).ready(function() {
 
     /* Active slide when table desktop */
     $(function() {
-        let isMobile = window.matchMedia("only screen and (max-width: 1023px)").matches;
+        let isMobile = window.matchMedia("only screen and (max-width: 992px)").matches;
 
         if (isMobile) {
             $(".list-tour").addClass("owl-carousel owl-theme");
@@ -431,6 +436,8 @@ $(document).ready(function() {
 
         } else {
             $(".list-tour").removeClass("owl-carousel owl-theme");
+            $(".image-box__slide").removeClass("owl-carousel owl-theme");
+
         }
     });
 

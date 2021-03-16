@@ -5,6 +5,7 @@ $(document).ready(function() {
     $(function() {
 
         $('input[name="departure"]').daterangepicker({
+
             autoUpdateInput: false,
             locale: {
                 cancelLabel: 'Clear'
@@ -39,5 +40,9 @@ $(document).ready(function() {
         $(".header__bottom").toggleClass("active");
         $(".overlay-menu ").toggleClass("active");
 
+    });
+    $(".overlay-menu").click(function(e) {
+        $(".header__bottom").removeClass("active");
+        $(".overlay-menu ").removeClass("active");
     });
 });

@@ -1,6 +1,7 @@
 @media (max-width: 1023px) {
     .combo__item {
         max-width: none;
+        width: auto;
     }
     .list-tour__item {
         max-width: none;
@@ -25,13 +26,15 @@
     }
     .header__top {
         align-items: center;
+        padding-bottom: 0;
+        height: 72.8px;
     }
     .header__bottom {
         position: fixed;
-        top: 77.72px;
+        top: 72.8px;
         right: 0;
         width: 320px;
-        height: calc(100% - 77.72px);
+        height: calc(100% - 72.8px);
         background: #fff;
         color: #000;
         overflow-y: scroll;
@@ -79,9 +82,6 @@
     }
     .btn-collapse {
         display: block;
-    }
-    .header__top {
-        padding-bottom: 0;
     }
     .btn--sign-up {
         box-shadow: inset 0 0 0 1px #ff9300;
@@ -158,6 +158,7 @@
 @media (max-width: 991px) {
     .image-box__item {
         margin-top: 0;
+        flex-basis: 32.6%;
     }
     .image-box__img {
         height: 120px;
@@ -165,6 +166,52 @@
     .box-custom {
         padding-top: 4rem;
         padding-bottom: 2rem;
+    }
+    .combo-page__list .combo__item {
+        width: calc(100%/2);
+    }
+    .tab-search {
+        flex-direction: column;
+    }
+    .tab-search__left {
+        flex-direction: column;
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    .search-combo {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .slect_price-combo {
+        width: 100%;
+        order: 3;
+    }
+    .input-combo {
+        margin-left: 0;
+    }
+    .select-combo {
+        margin-left: 0;
+        width: 100%;
+    }
+    .tab-search__right {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navtab-combo {
+        width: 100%;
+        padding: 10px;
+    }
+    .nav-item-combo {
+        flex: 1;
+    }
+}
+
+@media (max-width: 991px) {
+    .image-gallery .image-box__item {
+        margin-bottom: 10px;
+    }
+    .gp-banner__text h2 {
+        font-size: 35px;
     }
 }
 
@@ -239,7 +286,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .logo-footer img {
         margin: 0 auto;
     }
@@ -265,6 +312,28 @@
     ul.list-social a {
         width: 26px;
         height: 26px;
+    }
+}
+
+@media (max-width: 767px) {
+    .combo-page__list .combo__item {
+        flex: 100%;
+    }
+    .tab-search__left {
+        width: 80%;
+    }
+    .image-box__item {
+        flex-basis: 49%;
+    }
+    .gallery-box .viewmore {
+        width: 100%;
+        text-align: right;
+    }
+    .gp-banner__text h2 {
+        font-size: 26px;
+    }
+    .gp-banner__img {
+        height: 310px;
     }
 }
 
