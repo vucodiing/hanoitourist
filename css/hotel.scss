@@ -108,7 +108,8 @@
                 }
                 .inner-content-star i {
                     color: #fac02f;
-                    padding-bottom: 10px;
+                    padding-bottom: 5px;
+                    font-size: 14px;
                 }
                 .inner-booking {
                     display: flex;
@@ -132,6 +133,12 @@
                             background-color: #ff6900;
                         }
                     }
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 1.43;
+                    color: #4c4c4c;
+                    text-decoration: none;
                 }
             }
             &:hover {
