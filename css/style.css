@@ -1,9 +1,11 @@
 /* config */
 @font-face {
-  font-family: Display-Regular;
-  /* name */
-  src: url(../fonts/SF-UI-Display-Regular.ttf);
-  /* path */ }
+  font-family: 'SFUIDisplay';
+  src: url("../fonts/SFUISFUIDisplay.eot");
+  src: url("../fonts/SFUISFUIDisplay.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUISFUIDisplay.woff2") format("woff2"), url("../fonts/SFUISFUIDisplay.woff") format("woff"), url("../fonts/SFUIDisplay-Regular.ttf") format("truetype"), url("../fonts/SFUISFUIDisplay.svg#SFUISFUIDisplay") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
 @font-face {
   font-family: slick;
   /* name */
@@ -19,7 +21,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Sarabun", "Display-Regular", Arial, Helvetica, sans-serif;
+  font-family: "Sarabun", "SFUIDisplay", Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   overflow-x: hidden;
   font-weight: 400;
@@ -39,7 +41,7 @@ input,
 button,
 textarea,
 select {
-  font-family: "Sarabun", "Display-Regular", Arial, Helvetica, sans-serif;
+  font-family: "Sarabun", "SFUIDisplay", Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   outline: none;
