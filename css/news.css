@@ -87,7 +87,8 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  font-weight: 700; }
+  font-weight: 700;
+  margin: 30px 0; }
   .exp-travel .exp-text h2 {
     font-size: 24px; }
   .exp-travel .exp-text button {
@@ -101,5 +102,189 @@
     .exp-travel .exp-text button:hover {
       background-color: #0f62ac;
       color: #fff; }
+
+.travel-item {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 4px 10px 0 #00000033;
+  overflow: hidden; }
+  .travel-item .travel-date,
+  .travel-item .date-info,
+  .travel-item .date-view {
+    display: flex;
+    align-items: center; }
+    .travel-item .travel-date p,
+    .travel-item .date-info p,
+    .travel-item .date-view p {
+      margin-bottom: 0; }
+  .travel-item .date-info img,
+  .travel-item .date-view img {
+    padding-right: 5px; }
+  .travel-item .travel-date span {
+    padding: 0 10px;
+    color: #bbbbbb; }
+  .travel-item .travel-text {
+    padding: 10px; }
+    .travel-item .travel-text a {
+      font-size: 14px;
+      color: #000; }
+      .travel-item .travel-text a:hover {
+        color: #228afc; }
+
+.fixedBorder {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 4px 10px 0 #00000033;
+  display: inline-flex;
+  overflow: hidden; }
+  .fixedBorder .list-content {
+    padding: 10px; }
+    .fixedBorder .list-content a {
+      font-size: 14px;
+      color: #000; }
+      .fixedBorder .list-content a:hover {
+        color: #228afc; }
+    .fixedBorder .list-content .travel-date,
+    .fixedBorder .list-content .date-info,
+    .fixedBorder .list-content .date-view {
+      display: flex;
+      align-items: center; }
+      .fixedBorder .list-content .travel-date p,
+      .fixedBorder .list-content .date-info p,
+      .fixedBorder .list-content .date-view p {
+        margin-bottom: 0; }
+    .fixedBorder .list-content .date-info img,
+    .fixedBorder .list-content .date-view img {
+      padding-right: 5px; }
+    .fixedBorder .list-content .travel-date {
+      position: absolute;
+      bottom: 10px; }
+      .fixedBorder .list-content .travel-date span {
+        padding: 0 10px;
+        color: #bbbbbb; }
+  .fixedBorder .list-img .containImg {
+    width: 183px;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    -o-object-fit: cover;
+    object-fit: cover; }
+  .fixedBorder .list-img img {
+    width: 100%;
+    cursor: pointer;
+    max-height: 350px;
+    -o-object-fit: cover;
+    object-fit: cover; }
+
+.hr {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
+  margin-top: 30px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.search-post {
+  margin-top: 30px; }
+  .search-post h2 {
+    font-size: 16px;
+    font-weight: 700;
+    border-left: 2px solid #ff9300;
+    padding-left: 10px; }
+  .search-post .search {
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+    border-right: 0;
+    padding-left: 10px;
+    flex: 1;
+    height: 43px; }
+    .search-post .search button {
+      border: 0;
+      border-radius: 0 3px 3px 0;
+      background-color: #ff9300;
+      padding: 10px;
+      width: 38px;
+      color: #fff; }
+    .search-post .search input {
+      width: 100%;
+      font-size: 13px;
+      font-style: italic;
+      color: #bbb; }
+  .search-post .form-check {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; }
+  .search-post .fa-search::before {
+    content: "\f002"; }
+
+.tabs {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+  padding-bottom: 10px;
+  border-radius: 3px;
+  margin-top: 20px; }
+  .tabs .nav-tabs {
+    display: flex;
+    width: 100%; }
+    .tabs .nav-tabs .nav-item {
+      font-size: 14px;
+      text-decoration: none;
+      border-bottom: 1px solid #0f62ac;
+      border-radius: 3px 0 0;
+      border-color: #0f62ac;
+      padding: 8px 16px;
+      text-align: center; }
+      .tabs .nav-tabs .nav-item a {
+        color: #000; }
+    .tabs .nav-tabs .active {
+      background-color: #0f62ac; }
+      .tabs .nav-tabs .active a {
+        color: #fff; }
+
+@media (min-width: 321px) and (max-width: 575px) {
+  .img-right {
+    padding: 0;
+    display: inline-flex;
+    flex-direction: inherit; }
+
+  .top-right-img {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 10px; }
+
+  .img-right .top-right-img {
+    height: auto; }
+
+  .travel-item {
+    margin-bottom: 10px; } }
+@media (max-width: 425px) {
+  .fixedBorder {
+    display: block;
+    margin-bottom: 10px; }
+    .fixedBorder .list-img .containImg {
+      width: auto; }
+    .fixedBorder .list-content .travel-date {
+      position: inherit; }
+
+  .exp-travel .exp-text {
+    display: block;
+    text-align: center; }
+
+  .exp-travel .exp-text button {
+    width: 100%;
+    margin-top: 10px; }
+
+  .exp-travel .exp-text h2 {
+    font-size: 22px; }
+
+  .img-left {
+    padding: 0; } }
+@media (max-width: 768px) {
+  .travel-bottom {
+    margin-bottom: 10px; } }
 
 /*# sourceMappingURL=news.css.map */
